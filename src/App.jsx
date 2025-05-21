@@ -39,7 +39,7 @@ function App() {
                         <div key={battle.id} className="battle-card">
                             <h2>Battle ID: {battle.id}</h2>
                             <p><strong>Vincitore:</strong> {battle.vincitore}</p>
-                            <p><strong>Ratti:</strong> {battle.ratti}</p>
+                            <p><strong>Ratti:</strong> {battle.ratti}cazzi</p>
                             <div className="guilds">
                                 {battle.gilde.map((guild, index) => (
                                     <div key={index} className="guild-card">
