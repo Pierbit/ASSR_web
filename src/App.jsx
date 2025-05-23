@@ -10,7 +10,7 @@ function App() {
     useEffect(() => {
         const fetchBattles = async () => {
             try {
-                const res = await fetch("https://assr-production.up.railway.app/api/battles");
+                const res = await fetch("https://assr-production.up.railway.app/api/battles/day");
                 const data = await res.json();
                 setBattles(data);
             } catch (error) {
@@ -19,15 +19,14 @@ function App() {
                 setLoading(false);
             }
         };
-
         fetchBattles();
     }, []);
 
     return (
         <>
             <div className="main_title">
-                <h1>
-                    Albion Small Scale Reporter
+                <h1 style={{color:"white"}}>
+                    Daily ASSR battles
                 </h1>
             </div>
 
@@ -38,17 +37,26 @@ function App() {
                     {battles.map((battle) => (
                         <div key={battle.id} className="battle-card">
                             <h2>Battle ID: {battle.id}</h2>
+                            <p><strong>Data:</strong> {new Date(battle.data.replace(/\.\d+Z$/, 'Z')).toLocaleString([], { dateStyle: 'short', timeStyle: 'short' })}</p>
                             <p><strong>Vincitore:</strong> {battle.vincitore}</p>
                             <p><strong>Ratti:</strong> {battle.ratti}</p>
                             <div className="guilds">
                                 {battle.gilde.map((guild, index) => (
-                                    <div key={index} className="guild-card">
-                                        <h3>{guild.nome} [{guild.ally}]</h3>
-                                        <p>Players: {guild.players}</p>
-                                        <p>Kills: {guild.kills}</p>
-                                        <p>Deaths: {guild.deaths}</p>
-                                    </div>
+                                    <React.Fragment key={index}>
+                                        <div className="guild-card">
+                                            <h3>{guild.nome} [{guild.ally}]</h3>
+                                            <p>Players: {guild.players}</p>
+                                            <p>Kills: {guild.kills}</p>
+                                            <p>Deaths: {guild.deaths}</p>
+                                        </div>
+                                        {index < battle.gilde.length - 1 && (
+                                            <div className="vs-card">
+                                                <p style={{ textAlign: "center", fontWeight: "bold" }}>VS</p>
+                                            </div>
+                                        )}
+                                    </React.Fragment>
                                 ))}
+
                             </div>
                         </div>
                     ))}
