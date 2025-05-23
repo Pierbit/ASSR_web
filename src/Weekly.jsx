@@ -41,10 +41,10 @@ function Weekly() {
                 <ResponsiveContainer width="90%" height={2500}>
                     <BarChart layout="vertical" data={battles} margin={{ top: 20, right: 30, left: 100, bottom: 80 }}>
                         <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis type="number"/>
+                        <XAxis type="number" allowDecimals={false} orientation="top"/>
                         <YAxis dataKey="guild" type="category" width={200}/>
                         <Tooltip />
-                        <Legend />
+                        <Legend layout="horizontal" verticalAlign="top" align="center"/>
                         <Bar dataKey="numero_battaglie" fill="#8884d8" name="Battaglie" />
                         <Bar dataKey="vittorie" fill="#82ca9d" name="Vittorie" />
                     </BarChart>
