@@ -38,7 +38,7 @@ function Weekly() {
             {loading ? (
                 <p>Caricamento battaglie...</p>
             ) : (
-                <ResponsiveContainer width="90%" height={Math.max(500, battles.length * 40)}>
+                <ResponsiveContainer width="90%" height={Math.max(500, battles.length * 50)}>
                     <BarChart layout="vertical" data={battles} margin={{ top: 20, right: 30, left: 100, bottom: 80 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" allowDecimals={false} orientation="top"/>
