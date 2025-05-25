@@ -19,6 +19,7 @@ function Weekly() {
                     vittorie: stats.vittorie
                 })).sort((a, b) => b.numero_battaglie - a.numero_battaglie);
 
+                console.log(formatted.length);
                 setBattles(formatted);
             } catch (error) {
                 console.error("Errore nel fetch delle battaglie:", error);
