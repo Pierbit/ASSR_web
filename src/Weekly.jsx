@@ -3,8 +3,11 @@ import React, { useEffect, useState } from "react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 function Weekly() {
+
     const [battles, setBattles] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [marginFlag, setMarginFlag] = useState(100);
+    const [widthFlag, setWidthFlag] = useState(150);
 
     useEffect(() => {
         const fetchBattles = async () => {
@@ -30,6 +33,26 @@ function Weekly() {
         fetchBattles();
     }, []);
 
+    useEffect(() => {
+        const checkScreenSize = () => {
+            if(window.innerWidth < 768){
+                setMarginFlag(15);
+                setWidthFlag(100);
+            }else{
+                setMarginFlag(100);
+                setWidthFlag(150);
+            }
+        };
+
+        checkScreenSize();
+
+        window.addEventListener('resize', checkScreenSize);
+
+        return () => {
+            window.removeEventListener('resize', checkScreenSize);
+        };
+    }, []);
+
     return (
         <>
             <div className="main_title">
@@ -40,10 +63,10 @@ function Weekly() {
                 <p>Caricamento battaglie...</p>
             ) : (
                 <ResponsiveContainer width="90%" height={Math.max(500, battles.length * 50)}>
-                    <BarChart layout="vertical" data={battles} margin={{ top: 20, right: 30, left: 100, bottom: 80 }}>
+                    <BarChart layout="vertical" data={battles} margin={{ top: 20, right: 10, left: marginFlag, bottom: 80 }}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" allowDecimals={false} orientation="top"/>
-                        <YAxis dataKey="guild" type="category" width={200}/>
+                        <YAxis dataKey="guild" type="category" width={widthFlag}/>
                         <Tooltip />
                         <Legend layout="horizontal" verticalAlign="top" align="center"/>
                         <Bar dataKey="numero_battaglie" fill="#8884d8" name="Battaglie" />
