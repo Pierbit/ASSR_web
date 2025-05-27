@@ -3,13 +3,15 @@
 }
 
 .main_name{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    margin-left: 1rem;
 }
 
 .me-auto{
     margin-top: 0.15rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
 }
+
 
 @media screen and (min-width: 768px) {
     .main_name{
