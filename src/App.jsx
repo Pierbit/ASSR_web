@@ -1,4 +1,4 @@
-import './assets/components_css/App.css'
+import './assets/components_css/app.css'
 import React, { useEffect, useState } from "react";
 import Battle_card from './Battle_card.jsx'
 
