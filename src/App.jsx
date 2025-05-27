@@ -1,5 +1,6 @@
 import './assets/components_css/App.css'
 import React, { useEffect, useState } from "react";
+import Battle_card from './Battle_card.jsx'
 
 
 function App() {
@@ -35,30 +36,7 @@ function App() {
             ) : (
                 <div className="battle-list">
                     {battles.map((battle) => (
-                        <div key={battle.id} className="battle-card">
-                            <h2>Battle ID: {battle.id}</h2>
-                            <p><strong>Data:</strong> {new Date(battle.data.replace(/\.\d+Z$/, 'Z')).toLocaleString([], { dateStyle: 'short', timeStyle: 'short' })}</p>
-                            <p><strong>Vincitore:</strong> {battle.vincitore}</p>
-                            <p><strong>Ratti:</strong> {battle.ratti}</p>
-                            <div className="guilds">
-                                {battle.gilde.map((guild, index) => (
-                                    <React.Fragment key={index}>
-                                        <div className="guild-card">
-                                            <h3>{guild.nome} [{guild.ally}]</h3>
-                                            <p>Players: {guild.players}</p>
-                                            <p>Kills: {guild.kills}</p>
-                                            <p>Deaths: {guild.deaths}</p>
-                                        </div>
-                                        {index < battle.gilde.length - 1 && (
-                                            <div className="vs-card">
-                                                <p style={{ textAlign: "center", fontWeight: "bold" }}>VS</p>
-                                            </div>
-                                        )}
-                                    </React.Fragment>
-                                ))}
-
-                            </div>
-                        </div>
+                        <Battle_card key={battle.id} id={battle.id} date={battle.data} rats={battle.ratti} winner={battle.vincitore} guilds={battle.gilde} />
                     ))}
                 </div>
             )}

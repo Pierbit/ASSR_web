@@ -24,29 +24,3 @@ h1{
   gap: 1.5rem;
   padding: 1rem 2rem;
 }
-
-.battle-card {
-  border: 2px solid #444;
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: #f0f0f0;
-}
-
-.guilds {
-  display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
-}
-
-.guild-card {
-  border: 1px solid #aaa;
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.vs-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
