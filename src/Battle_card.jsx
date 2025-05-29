@@ -2,7 +2,7 @@ import './assets/components_css/battle_card.css'
 import Guild_card from './Guild_card.jsx'
 import React from "react";
 
-function Battle_card({id, date, winner, rats, guilds}) {
+function Battle_card({id, date, winner, rats, guilds, secondaryguilds}) {
 
     function ratteria(){
         if(rats >= 0 && rats <= 5){
@@ -35,6 +35,7 @@ function Battle_card({id, date, winner, rats, guilds}) {
                                 deaths={guild.deaths}
                                 kills={guild.kills}
                                 players={guild.players}
+                                secondaryguilds={secondaryguilds.filter(g => g.ally === guild.ally)}
                             />
                             {index < guilds.length - 1 && (
                                 <div className="vs-card">

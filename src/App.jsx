@@ -36,7 +36,7 @@ function App() {
             ) : (
                 <div className="battle-list">
                     {battles.map((battle) => (
-                        <Battle_card key={battle.id} id={battle.id} date={battle.data} rats={battle.ratti} winner={battle.vincitore} guilds={battle.gilde} />
+                        <Battle_card key={battle.id} id={battle.id} date={battle.data} rats={battle.ratti} winner={battle.vincitore} guilds={battle.gilde} secondaryguilds={battle.secondary} />
                     ))}
                 </div>
             )}
