@@ -57,7 +57,7 @@ function App() {
                     onChange={(e) => setSelectedDay(e.target.value)}
                 >
                     <option value="today">1 day ago</option>
-                    <option value="yesterday">2 day ago</option>
+                    <option value="yesterday">2 days ago</option>
                 </Form.Select>
             </div>
 
