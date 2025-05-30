@@ -69,8 +69,8 @@ function Weekly() {
                         <YAxis dataKey="guild" type="category" width={widthFlag}/>
                         <Tooltip />
                         <Legend layout="horizontal" verticalAlign="top" align="center"/>
-                        <Bar dataKey="numero_battaglie" fill="#8884d8" name="Battaglie" />
-                        <Bar dataKey="vittorie" fill="#82ca9d" name="Vittorie" />
+                        <Bar dataKey="numero_battaglie" fill="#AF47D2" name="Battaglie" />
+                        <Bar dataKey="vittorie" fill="#FFDB00" name="Vittorie" />
                     </BarChart>
                 </ResponsiveContainer>
             )}
