@@ -21,9 +21,9 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds}) {
 
     function vincitore(nome){
         if(nome === winner){
-            return <span style={{color:"green"}}>{nome}</span>
+            return <span style={{color:"#007700"}}>{nome}</span>
         }else{
-            return <span style={{color:"black"}}>{nome}</span>
+            return <span style={{color:"#cb0000"}}>{nome}</span>
         }
     }
 
