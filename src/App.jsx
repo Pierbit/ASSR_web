@@ -26,24 +26,6 @@ function App() {
         fetchBattles(selectedDay);
     }, [selectedDay]); //
 
-    const yesterdayDate = new Date();
-    const anotherYesterdayDate = new Date();
-
-    /*yesterdayDate.setDate(yesterdayDate.getDate() - 1);
-    anotherYesterdayDate.setDate(anotherYesterdayDate.getDate() - 2);
-
-    const formattedYesterday = yesterdayDate.toLocaleDateString('it-IT', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-    });
-
-    const formattedAnotherYesterday = anotherYesterdayDate.toLocaleDateString('it-IT', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-    });*/
-
     return (
         <>
             <div className="main_title">
