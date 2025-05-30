@@ -3,8 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-router-dom';
+import logo from './assets/components_images/logo-e-testo.png'
 import './assets/components_css/header.css'
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
 function Header() {
 
@@ -37,6 +38,10 @@ function Header() {
                         <Nav.Link className={"header_link"} as={Link} to="/">Daily battles</Nav.Link>
                         <Nav.Link className={"header_link"} as={Link} to="/week">Weekly report</Nav.Link>
                     </Nav>
+                    <div className={"logo_container"}>
+                        <p className={"logo_container_text"}>Powered By</p>
+                        <img className={"logo_e_testo"} src={logo} alt="logo" />
+                    </div>
                 </Container>
             </Navbar>
         </>

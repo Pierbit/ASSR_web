@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.jsx'
 import Header from './Header.jsx'
 import Weekly from './Weekly.jsx'
+import Footer from './Footer.jsx'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 createRoot(document.getElementById('root')).render(
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
               <Route path="/" element={<App />} />
               <Route path="/week" element={<Weekly />} />
           </Routes>
+          <Footer />
       </BrowserRouter>
   </StrictMode>,
 )

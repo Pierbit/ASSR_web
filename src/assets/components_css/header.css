@@ -1,7 +1,11 @@
-.container{
-    margin:0;
+.container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto;
 }
 .headbar{
+    display: flex !important;
     border-bottom: 1px solid rebeccapurple;
 }
 
@@ -12,6 +16,38 @@
 
 .me-auto{
     font-size: 1rem;
+}
+
+.logo_e_testo{
+    max-height: 70px;
+    max-width: 90px;
+}
+
+.logo_container{
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_container_text{
+    margin-top: 1rem;
+    display: flex;
+    color: rebeccapurple;
+    align-self: center;
+}
+
+@media screen and (max-width: 360px) {
+    .me-auto{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 470px) {
+    .logo_container_text{
+        display: none;
+    }
+    .logo_container{
+        margin-right: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {

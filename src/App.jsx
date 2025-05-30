@@ -26,9 +26,36 @@ function App() {
         fetchBattles(selectedDay);
     }, [selectedDay]); //
 
+    const yesterdayDate = new Date();
+    const anotherYesterdayDate = new Date();
+
+    yesterdayDate.setDate(yesterdayDate.getDate() - 1);
+    anotherYesterdayDate.setDate(anotherYesterdayDate.getDate() - 2);
+
+    const formattedYesterday = yesterdayDate.toLocaleDateString('it-IT', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+    });
+
+    const formattedAnotherYesterday = anotherYesterdayDate.toLocaleDateString('it-IT', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+    });
+
+    function putDate() {
+        if(selectedDay === "today") {
+            return <p className={"battles_dates"}>{formattedYesterday}</p>
+        } else if (selectedDay === "yesterday") {
+            return <p className={"battles_dates"}>{formattedAnotherYesterday}</p>
+        }
+    }
+
     return (
         <>
             <div className="main_title">
+                {putDate()}
                 <h1 style={{ color: "white" }}>
                     Daily ASSR battles
                 </h1>
