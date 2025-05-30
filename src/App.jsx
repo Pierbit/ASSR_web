@@ -71,7 +71,7 @@ function App() {
             </div>
 
             {loading ? (
-                <p>Caricamento battaglie...</p>
+                <p style={{color:"white"}}>Loading...</p>
             ) : (
                 <div className="battle-list">
                     {battles.map((battle) => (

@@ -60,7 +60,7 @@ function Weekly() {
             </div>
 
             {loading ? (
-                <p>Caricamento battaglie...</p>
+                <p style={{color:"white"}}>Loading...</p>
             ) : (
                 <ResponsiveContainer width="90%" height={Math.max(500, battles.length * 50)}>
                     <BarChart layout="vertical" data={battles} margin={{ top: 20, right: 10, left: marginFlag, bottom: 80 }}>
@@ -69,8 +69,8 @@ function Weekly() {
                         <YAxis dataKey="guild" type="category" width={widthFlag}/>
                         <Tooltip />
                         <Legend layout="horizontal" verticalAlign="top" align="center"/>
-                        <Bar dataKey="numero_battaglie" fill="#AF47D2" name="Battaglie" />
-                        <Bar dataKey="vittorie" fill="#FFDB00" name="Vittorie" />
+                        <Bar dataKey="numero_battaglie" fill="#AF47D2" name="Battles" />
+                        <Bar dataKey="vittorie" fill="#FFDB00" name="Victories" />
                     </BarChart>
                 </ResponsiveContainer>
             )}
