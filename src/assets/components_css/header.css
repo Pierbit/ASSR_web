@@ -6,7 +6,7 @@
 }
 .headbar{
     display: flex !important;
-    border-bottom: 1px solid rebeccapurple;
+    border-bottom: 1px solid #FFD524;
 }
 
 .main_name{
@@ -32,7 +32,7 @@
 .logo_container_text{
     margin-top: 1rem;
     display: flex;
-    color: rebeccapurple;
+    color: #FFD524;
     align-self: center;
 }
 

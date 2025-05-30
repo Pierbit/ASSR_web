@@ -34,8 +34,8 @@ h1{
 
 .battles_dates{
   font-weight: bold;
-  color: white;
-  background-color: rebeccapurple;
+  color: black;
+  background-color: #FFD524;
   border-radius: 5px;
   padding: 0.5rem 3.5rem;
 }
