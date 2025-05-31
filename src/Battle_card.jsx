@@ -46,7 +46,7 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
                 <div className="left">
                     <h2 className="battle_id_container">Battle ID: {id}</h2>
                     {famaTotale()}
-                    <h2 className="battle_id_container">Kills totali: {totalKills}</h2>
+                    <h2 className="battle_id_container">Total kills: {totalKills}</h2>
                 </div>
 
                 <div className="center">

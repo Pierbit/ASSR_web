@@ -14,6 +14,7 @@ function App() {
             setLoading(true);
             const res = await fetch(`https://assr-production.up.railway.app/api/battles/day?day=${day}`);
             const data = await res.json();
+            data.sort((a, b) => b.fama - a.fama);
             setBattles(data);
         } catch (error) {
             console.error("Errore nel fetch delle battaglie:", error);

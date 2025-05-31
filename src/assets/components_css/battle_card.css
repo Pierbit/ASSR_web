@@ -29,6 +29,9 @@
    .card_stats{
        text-align: left;
    }
+   .left{
+       text-align: center;
+   }
 }
 
 @media (min-width: 600px) {
