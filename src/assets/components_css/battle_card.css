@@ -85,6 +85,7 @@
 
 .battle_id_container {
     white-space: nowrap; /* Prevent text wrapping */
+    font-size: 1.3rem;
 }
 
 .battle_title_container {

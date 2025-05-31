@@ -4,7 +4,7 @@ import {useState} from 'react';
 import React from "react";
 import Button from 'react-bootstrap/Button';
 
-function Battle_card({id, date, winner, rats, guilds, secondaryguilds}) {
+function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame, totalKills}) {
     const [expanded, setExpanded] = useState(false);
 
     function ratteria() {
@@ -27,12 +27,26 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds}) {
         }
     }
 
+    function famaTotale(){
+        if(totalFame < 1000000){
+            return <h2 className="battle_id_container">Total Fame: <span style={{color:"#0081cf"}}>{totalFame.toLocaleString('de-DE')}</span></h2>
+        }else if(totalFame > 1000000 && totalFame < 5000000){
+            return <h2 className="battle_id_container">Total Fame: <span style={{color:"#ffc75f"}}>{totalFame.toLocaleString('de-DE')}</span></h2>
+        } else if(totalFame > 5000000 && totalFame < 50000000){
+            return <h2 className="battle_id_container">Total Fame: <span style={{color:"red"}}>{totalFame.toLocaleString('de-DE')}</span></h2>
+        } else{
+            return <h2 className="battle_id_container">Total Fame: <span style={{color:"red"}}>{totalFame}</span></h2>
+        }
+    }
+
     return (
         <div className="card_main">
 
             <div className="card_title">
                 <div className="left">
-                    <h2 className="battle_id_container">Battle: {id}</h2>
+                    <h2 className="battle_id_container">Battle ID: {id}</h2>
+                    {famaTotale()}
+                    <h2 className="battle_id_container">Kills totali: {totalKills}</h2>
                 </div>
 
                 <div className="center">

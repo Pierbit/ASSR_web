@@ -83,6 +83,8 @@ function App() {
                             winner={battle.vincitore}
                             guilds={battle.gilde}
                             secondaryguilds={battle.secondary}
+                            totalFame={battle.fama}
+                            totalKills={battle.killsTotali}
                         />
                     ))}
                 </div>
