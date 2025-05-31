@@ -15,7 +15,7 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
             return <p><span style={{fontWeight: "bold"}}>Rats:</span> <span style={{color: "#ffc75f"}}>{rats}</span>
             </p>;
         } else {
-            return <p><span style={{fontWeight: "bold"}}>Rats:</span> <span style={{color: "red"}}>{rats}</span></p>;
+            return <p><span style={{fontWeight: "bold"}}>Rats:</span> <span style={{color: "#cb0000"}}>{rats}</span></p>;
         }
     }
 
@@ -33,9 +33,9 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
         }else if(totalFame > 1000000 && totalFame < 5000000){
             return <h2 className="battle_id_container">Total Fame: <span style={{color:"#ffc75f"}}>{totalFame.toLocaleString('de-DE')}</span></h2>
         } else if(totalFame > 5000000 && totalFame < 50000000){
-            return <h2 className="battle_id_container">Total Fame: <span style={{color:"red"}}>{totalFame.toLocaleString('de-DE')}</span></h2>
+            return <h2 className="battle_id_container">Total Fame: <span style={{color:"#cb0000"}}>{totalFame.toLocaleString('de-DE')}</span></h2>
         } else{
-            return <h2 className="battle_id_container">Total Fame: <span style={{color:"red"}}>{totalFame}</span></h2>
+            return <h2 className="battle_id_container">Total Fame: <span style={{color:"#cb0000"}}>{totalFame}</span></h2>
         }
     }
 
