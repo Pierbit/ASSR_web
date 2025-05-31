@@ -46,9 +46,9 @@ function App() {
 
     function putDate() {
         if(selectedDay === "today") {
-            return <p className={"battles_dates"}>{formattedYesterday}</p>
+            return <p className={"battles_dates"}>{formattedYesterday} 19:00-22:00 UTC</p>
         } else if (selectedDay === "yesterday") {
-            return <p className={"battles_dates"}>{formattedAnotherYesterday}</p>
+            return <p className={"battles_dates"}>{formattedAnotherYesterday} 19:00-22:00 UTC</p>
         }
     }
 
