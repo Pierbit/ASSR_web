@@ -48,6 +48,12 @@
     }
 }
 
+@media (max-width: 600px) {
+    .guild-card {
+        margin: 0;
+    }
+}
+
 @media (min-width: 900px) {
     .guild-card{
         width: 300px;

@@ -11,7 +11,7 @@ function Guild_card({ name, ally, players, kills, deaths, secondaryguilds }) {
                 <p>💀 Deaths: {deaths}</p>
                 {secondaryguilds && secondaryguilds.length > 0 && (
                     <div className="secondary-guilds">
-                            <p>🔗 Secondary Guilds:</p>
+                            <p>🪖 Secondary Guilds:</p>
                         <ul>
                             {secondaryguilds.map((g, i) => (
                                 <li key={i}>{g.nome} with {g.players} players</li>
