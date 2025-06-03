@@ -89,12 +89,12 @@
 }
 
 .battle_title_container {
-    display: inline-block;
+    display: flex;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 100%;
-    margin-right: 21rem;
+    margin-right: 6.5rem;
 }
 
 .vs-card-inline {
