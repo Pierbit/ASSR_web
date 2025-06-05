@@ -112,11 +112,12 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
                         </a>
                         </p>
                         <p>
-                            <span style={{fontWeight: "bold"}}>Date: </span>
+                            <span style={{fontWeight: "bold"}}>Date (UTC): </span>
                             <span style={{color: "#0081cf"}}>
                                 {new Date(date.replace(/\.\d+Z$/, 'Z')).toLocaleString([], {
                                     dateStyle: 'short',
-                                    timeStyle: 'short'
+                                    timeStyle: 'short',
+                                    timeZone: 'UTC'
                                 })}
                             </span>
                         </p>
