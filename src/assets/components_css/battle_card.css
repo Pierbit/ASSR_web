@@ -3,11 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    border: 2px solid rebeccapurple;
+    background-color: #212529;
+    border-left: 7px solid #FFD524;
     border-radius: 5px;
-    box-shadow: 10px 10px 10px black;
+    box-shadow: 2px 5px 5px #000;
     font-family: Verdana, serif;
+    color: #f0f0f0;
     padding: 1rem;
     margin: 0.5rem;
     max-width: 100%;
@@ -22,20 +23,9 @@
     text-align: center;
     align-items: center;
     font-size: 1.2rem;
-    border-top: 2px solid #444;
+    border-top: 2px solid rebeccapurple;
     width: 100%;
-}
-
-@media (min-width: 600px) {
-    .card_stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 900px) {
-    .card_stats {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    color: #f0f0f0;
 }
 
 .card_guilds {
@@ -45,11 +35,10 @@
     align-items: stretch;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
+    margin: 0 0.5rem;
 }
 
-.vs-card{
+.vs-card {
     display: flex;
     justify-self: center;
     align-items: center;
@@ -60,11 +49,11 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    justify-content: space-between; /* Added for better spacing */
+    justify-content: space-between;
 }
 
 .left {
-    flex: 1 1 auto; /* Changed to allow growth */
+    flex: 1 1 auto;
     margin-right: 10px;
     display: flex;
     flex-direction: column;
@@ -77,6 +66,7 @@
     text-align: center;
     overflow: hidden;
 }
+
 
 .right {
     flex: 0 0 auto;
@@ -100,17 +90,17 @@
 .vs-card-inline {
     margin: 0 5px;
     font-size: 1.2rem;
-    color: black;
+    color: #bbb;
 }
 
-.mobile_battle_id{
+.mobile_battle_id {
     display: none;
 }
 
 .toggle_button {
     white-space: nowrap;
-    padding: 0.25rem 0.5rem; /* Reduced padding for mobile */
-    font-size: 0.9rem; /* Smaller font for mobile */
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
 }
 
 .card_content_container {
@@ -118,23 +108,25 @@
     transition: all 0.3s ease;
 }
 
-.pvp_fame_icon{
+.pvp_fame_icon {
     margin-bottom: 5px;
     margin-right: 5px;
-    width: 20px; /* Added fixed size */
-    height: 20px; /* Added fixed size */
+    width: 20px;
+    height: 20px;
 }
 
 .battle_link {
-    color: #0081cf; /* Soft blue */
+    color: #0081cf;
     text-decoration: none;
     font-weight: normal;
 }
 
 .battle_link:hover {
     text-decoration: underline;
-    color: #0081cf;
+    color: #99e0ff;
 }
+
+/* RESPONSIVE MEDIA QUERIES */
 
 @media (max-width: 600px) {
     .card_stats {
@@ -146,7 +138,7 @@
     }
 
     .battle_id_container {
-        font-size: 1.1rem; /* Slightly reduced */
+        font-size: 1.1rem;
     }
 
     .pvpfame {
@@ -158,27 +150,36 @@
     }
 
     .left {
-        margin-right: 5px; /* Reduced margin */
+        margin-right: 5px;
     }
 
     .right {
-        margin-left: 5px; /* Reduced margin */
-    }
-}
-
-@media (max-width: 520px) {
-    .battle_id_container {
-        font-size: 1rem;
-    }
-
-    .pvpfame {
-        font-size: 1.1rem !important;
+        margin-left: 5px;
     }
 
     .toggle_button {
         font-size: 0.8rem;
-        padding: 0.2rem 0.4rem;
-        margin-top: 1rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .vs-card-inline {
+        font-size: 0.5rem !important;
+    }
+
+    .mobile_battle_id {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .mobile-guild-names {
+        font-size: 0.9rem;
+        -webkit-line-clamp: 3;
+        max-height: 3.6em;
+    }
+
+    .pvpfame {
+        font-size: 1rem !important;
     }
 }
 
@@ -193,48 +194,9 @@
     word-break: break-word;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     line-height: 1.2;
     font-size: 0.8rem !important;
-}
-
-@media (max-width: 600px) {
-    .left {
-        flex: 1;
-        min-width: 0; /* Allows text truncation */
-    }
-
-    .battle_id_container {
-        font-size: 1rem;
-        margin-bottom: 0.3rem;
-    }
-
-    .pvpfame {
-        font-size: 1.1rem !important;
-    }
-
-    .toggle_button {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.8rem;
-    }
-    .vs-card-inline {
-        font-size: 0.5rem !important;
-    }
-    .mobile_battle_id{
-        display: block;
-    }
-}
-
-@media (max-width: 400px) {
-    .mobile-guild-names {
-        font-size: 0.9rem;
-        -webkit-line-clamp: 3; /* Allow more lines on very small screens */
-        max-height: 3.6em;
-    }
-
-    .pvpfame {
-        font-size: 1rem !important;
-    }
 }

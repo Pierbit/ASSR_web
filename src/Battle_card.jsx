@@ -28,14 +28,14 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
         } else if (rats > 5 && rats <= 10) {
             return <p><span style={{fontWeight: "bold"}}>Rats:</span> <span style={{color: "#ffc75f"}}>{rats}</span></p>;
         } else {
-            return <p><span style={{fontWeight: "bold"}}>Rats:</span> <span style={{color: "#cb0000"}}>{rats}</span></p>;
+            return <p><span style={{fontWeight: "bold"}}>Rats:</span> <span style={{color: "#E31F1F"}}>{rats}</span></p>;
         }
     }
 
     function vincitore(nome) {
         return nome === winner ?
-            <span style={{color:"#007700"}}>{nome}</span> :
-            <span style={{color:"#cb0000"}}>{nome}</span>;
+            <span style={{color:"#06D229"}}>{nome}</span> :
+            <span style={{color:"#E31F1F"}}>{nome}</span>;
     }
 
     function renderGuildNames() {
@@ -56,7 +56,7 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
     function famaTotale() {
         let color = "#0081cf";
         if (totalFame > 1000000 && totalFame < 5000000) color = "#ffc75f";
-        else if (totalFame >= 5000000) color = "#cb0000";
+        else if (totalFame >= 5000000) color = "#E31F1F";
 
         return (
             <h2 className="battle_id_container pvpfame">
@@ -94,7 +94,7 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
 
                 <div className="right">
                     <Button
-                        variant="outline-dark"
+                        variant="outline-light"
                         className="toggle_button"
                         onClick={() => setExpanded(prev => !prev)}
                     >
@@ -112,7 +112,7 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
                         </a>
                         </p>
                         <p>
-                            <span style={{fontWeight: "bold"}}>Data: </span>
+                            <span style={{fontWeight: "bold"}}>Date: </span>
                             <span style={{color: "#0081cf"}}>
                                 {new Date(date.replace(/\.\d+Z$/, 'Z')).toLocaleString([], {
                                     dateStyle: 'short',
@@ -122,7 +122,7 @@ function Battle_card({id, date, winner, rats, guilds, secondaryguilds, totalFame
                         </p>
                         <p>
                             <span style={{fontWeight: "bold"}}>Winner: </span>
-                            <span style={{color: "green"}}>{winner}</span>
+                            <span style={{color: "#06D229"}}>{winner}</span>
                         </p>
                         {ratteria()}
                     </div>
