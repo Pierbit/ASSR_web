@@ -67,10 +67,14 @@ function Weekly() {
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis type="number" allowDecimals={false} orientation="top"/>
                         <YAxis dataKey="guild" type="category" width={widthFlag}/>
-                        <Tooltip />
+                        <Tooltip
+                            contentStyle={{ backgroundColor: "#ffffff", border: "none" }} // dark background
+                            itemStyle={{ color: "#1e1e1e" }} // white text
+                            cursor={{ fill: 'rgba(200, 200, 200, 0.2)' }} // optional highlight when hovering
+                        />
                         <Legend layout="horizontal" verticalAlign="top" align="center"/>
                         <Bar dataKey="numero_battaglie" fill="#AF47D2" name="Battles" />
-                        <Bar dataKey="vittorie" fill="#cfa404" name="Victories" />
+                        <Bar dataKey="vittorie" fill="#FFD524" name="Victories" />
                     </BarChart>
                 </ResponsiveContainer>
             )}
