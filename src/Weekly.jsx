@@ -70,7 +70,7 @@ function Weekly() {
                         <Tooltip />
                         <Legend layout="horizontal" verticalAlign="top" align="center"/>
                         <Bar dataKey="numero_battaglie" fill="#AF47D2" name="Battles" />
-                        <Bar dataKey="vittorie" fill="#FFDB00" name="Victories" />
+                        <Bar dataKey="vittorie" fill="#cfa404" name="Victories" />
                     </BarChart>
                 </ResponsiveContainer>
             )}
